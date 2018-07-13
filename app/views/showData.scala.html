@@ -1,0 +1,34 @@
+@(mycom:Products)
+<html>
+    <head>
+        <title>My Products</title>
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <H1>
+            Welcome to products sale page
+        </H1>
+        <table class="table table-success">
+            <tr>
+                <th>ID </th> <th>Name</th> <th>Brand</th><th>Price</th><th>Amount</th>
+                <th>Total</th><th>Discount</th><th>Net</th>
+            </tr>
+
+            <tr>
+                <td>@mycom.getId </td>
+                <td>@mycom.getName() </td>
+                <td>@mycom.getBrand() </td>
+                <td>@mycom.getPrice() </td>
+                <td>@mycom.getAmount() </td>
+                <td>@mycom.getTotal() </td>
+                <td>@mycom.getDiscount() </td>
+                <td>@(mycom.getTotal() - mycom.getDiscount()) </td>
+
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+
+

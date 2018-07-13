@@ -1,0 +1,58 @@
+@(book:Book)
+
+<hmtl>
+    <head>
+        <title>Show book data</title>
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap/css/bootstrap.css">
+    </head>
+    <body >
+        <h1>ข้อมูลหนังสือ </h1>
+        <br><br>
+        <div class="container" style="background-color: pink;color: blue">
+            <div class="row">
+                <div class="col-sm-2" style="background-color: gainsboro"> </div>
+                <div class="col-sm-8" style="background-color: lightskyblue">
+                    <br>
+                   <table class="table table-primary">
+                       <tr>
+                           <th>ชื่อหนังสือ </th>
+                           <td>@book.getTitle()</td>
+                       </tr>
+                       <tr>
+                           <th>ชื่อผู้แต่ง</th>
+                           <td>@book.getAuthor()</td>
+                       </tr>
+                       <tr>
+                           <th>ราคา</th>
+                           <td>@book.getPrice()</td>
+                       </tr>
+                       <tr>
+                           <th>ประเภทหนังสือ</th>
+                           <td>@book.getBooktype()</td>
+                       </tr>
+                       <tr>
+                           <th>ภาษา</th>
+                           <td>@book.getLanguage()</td>
+                       </tr>
+                       <tr>
+                           <th>เคยได้รับรางวัล</th>
+                           <td>@book.getAward()</td>
+                       </tr>
+                       <tr>
+                           <th>รายละเอียด</th>
+                           <td>@book.getDetail()</td>
+                       </tr>
+
+                   </table>
+
+
+
+                </div>
+                <div class="col-sm-2" style="background-color: gainsboro"> </div>
+            </div>
+
+        </div>
+
+
+    </body>
+</hmtl>

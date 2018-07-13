@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Book Form </title>
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap/css/bootstrap.css">
+    </head>
+    <body style="background-color:lightblue;color:#004085;">
+        <h1 style="color: red">ตัวอย่างการรับข้อมูลหนังสือ</h1>
+        <form action="/book_post" method="post" >
+            <table>
+                <tr>
+                    <th>ชื่อหนังสือ</th>
+                    <td><input type="text" name="title" size="50" maxlength="40" required> </td>
+                </tr>
+                <tr>
+                    <th>ชื่อผู้แต่ง</th>
+                    <td><input type="text" name="author" size="50" maxlength="40" required></td>
+                </tr>
+                <tr>
+                    <th>ราคา</th>
+                    <td><input type="number" name="price"> </td>
+                </tr>
+                <tr>
+                    <th>ประเภทหนังสือ</th>
+                    <td>
+                        <select name="booktype">
+                            <option value="สารคดี">สารคดี</option>
+                            <option value="นวนิยาย">นวนิยาย</option>
+                            <option value="หนังสืออ้างอิง">หนังสืออ้างอิง </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ภาษา</th>
+                    <td>
+                        <input type="radio" name="language" value="ไทย">ไทย
+                        <input type="radio" name="language" value="ต่างประเทศ">ต่างประเทศ
+                    </td>
+                </tr>
+                <tr>
+                    <th>เคยได้รับรางวัล</th>
+                    <td><input type="checkbox" name="award" value="Yes" > </td>
+                </tr>
+                <tr>
+                    <th>รายละเอียด</th>
+                    <td><textarea name="detail" cols="65" rows="5"></textarea> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="บันทึก" class="btn btn-success">
+                        <input type="reset" value="เคลียร์" class="btn btn-danger">
+                     </td>
+                </tr>
+            </table>
+
+        </form>
+
+    </body>
+</html>
