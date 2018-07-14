@@ -29,4 +29,8 @@ public class Electric {
     public void setName(String name) {
         this.name = name;
     }
+
+    public  String getFullName() {
+        return id + "  " + name;
+    }
 }
