@@ -31,6 +31,6 @@ public class Electric {
     }
 
     public  String getFullName() {
-        return id + "----" + name;
+        return id + "  " + name;
     }
 }
