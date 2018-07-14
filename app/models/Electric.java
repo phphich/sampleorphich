@@ -33,4 +33,7 @@ public class Electric {
     public  String getFullName() {
         return id + "  " + name;
     }
+    public String getAllName() {
+        return id + " aaa " + name;
+    }
 }
