@@ -1,0 +1,46 @@
+@(books:List[Book])
+
+<hmtl>
+    <head>
+        <title>Show book data</title>
+        <link rel="stylesheet" href="/assets/stylesheets/bootstrap/css/bootstrap.css">
+    </head>
+    <body >
+        <h1>ข้อมูลหนังสือ (List)</h1>
+        <br><br>
+        <div class="container" style="background-color: pink;color: blue">
+            <div class="row">
+                <div class="col-sm-2" style="background-color: gainsboro"> </div>
+                <div class="col-sm-8" style="background-color: lightskyblue">
+                    <br>
+                   <table class="table table-primary">
+                       <tr>
+                           <th>ชื่อหนังสือ </th>
+                           <th>ชื่อผู้แต่ง</th>
+                           <th>ราคา</th>
+                           <th>ประเภทหนังสือ</th>
+                           <th>ภาษา</th>
+                           <th>เคยได้รับรางวัล</th>
+                           <th>รายละเอียด</th>
+                       </tr>
+                       @for(bk <- books){
+                           <tr>
+                               <td>@bk.getTitle()  </td>
+                               <td>@bk.getAuthor() </td>
+                               <td>@bk.getPrice() </td>
+                               <td>@bk.getBooktype() </td>
+                               <td>@bk.getLanguage() </td>
+                               <td>@bk.getAward() </td>
+                               <td>@bk.getDetail() </td>
+                           </tr>
+                       }
+                   </table>
+                </div>
+                <div class="col-sm-2" style="background-color: gainsboro"> </div>
+            </div>
+
+        </div>
+
+
+    </body>
+</hmtl>

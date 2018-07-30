@@ -1,0 +1,26 @@
+@(myForm:Form[Comics])
+@import helper._;
+        <h1>ตัวอย่างการรับข้อมูลในฟอร์มแบบหนังสือการ์ตูน </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2"> </div>
+                <div class="col-sm-8">
+
+                    @helper.form(action=routes.myController.comics_post_helper_list(), 'class->"from-control" , 'enctype->"multipart/form-data"){
+                        @inputText(myForm("title"), '_label ->"ชื่อหนังสือ", 'size->"50", 'maxlength->"40", 'required->"requied")
+                        @inputText(myForm("author"), '_label->"ชื่อผู้แต่ง", 'size->"50", 'maxlength->"40", 'required->"requied" )
+                        @inputText(myForm("price"), '_label->"ราคา", 'size->"10")
+                        @select(myForm("booktype"), options=Seq("สารคดี"->"สารคดี","นวนิยาย"->"นวนิยาย","หนังสืออ้างอิง"->"หนังสืออ้างอิง"),
+                            '_label->"ประเภทหนังสือ" )
+                        @inputRadioGroup(myForm("language"), options=Seq("ไทย"->"ไทย", "ต่างประเทศ"->"ต่างประเทศ"), '_label->"ภาษา")
+                        @checkbox(myForm("award"), '_label->"เคยได้รับรางวัล")
+                        @textarea(myForm("detail"),'_label->"รายละเอียด", 'cols->"65", 'rows->"5")
+                        @inputText(myForm("discountRate"), '_label->"ส่วนลด(%)", 'size->10)
+                        @inputFile(myForm("picture"), '_label->"รูปปกหนังสือ")
+                        <input type="submit" value="บันทึก" class="btn btn-success">
+                        <input type="reset" value="เคลียร์" class="btn btn-danger">
+                    }
+                    </div>
+                <div class="col-sm-2"> </div>
+            </div>
+        </div>

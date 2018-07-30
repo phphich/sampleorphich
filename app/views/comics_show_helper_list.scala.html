@@ -1,0 +1,45 @@
+@(comicsList:List[Comics])
+@import play.api.Play.current;
+
+        <h1>ข้อมูลหนังสือการ์ตูน</h1>
+        <br><br>
+        <div class="container" style="background-color: pink;color: blue">
+            <div class="row">
+                <div class="col-sm-12" style="background-color: lightskyblue">
+                    <br>
+                   <table class="table table-success">
+                       <tr>
+                           <th>รหัสหนังสือ </th>
+                           <th>ชื่อหนังสือ </th>
+                           <th>ชื่อผู้แต่ง</th>
+                           <th>ราคา</th>
+                           <th>ประเภทหนังสือ</th>
+                           <th>ภาษา</th>
+                           <th>เคยได้รับรางวัล</th>
+                           <th>รายละเอียด</th>
+                           <th>ส่วนลด (%) </th>
+                            <th>ราคาสุทธิ</th>
+                           <th>   </th>
+                       </tr>
+                       @for(bk <- comicsList){
+                           <tr>
+                               <td>@bk.getId() </td>
+                               <td>@bk.getTitle()  </td>
+                               <td>@bk.getAuthor() </td>
+                               <td>@bk.getPrice() </td>
+                               <td>@bk.getBooktype() </td>
+                               <td>@bk.getLanguage() </td>
+                               <td>@bk.getAward() </td>
+                               <td>@bk.getDetail() </td>
+                               <td>@bk.getDiscountRate() </td>
+                               <td>@bk.getNetPrice() </td>
+                               <td>
+                                   <img src='/assets@{current.configuration.getString("com_pic_path")}/@bk.getPicture()' class="img-thumbnail" width="100px" height="100px">
+
+                               </td>
+                           </tr>
+                       }
+                   </table>
+                </div>
+            </div>
+        </div>
