@@ -157,7 +157,7 @@ public class myController extends Controller{
                 }
                 comics = myForm.get();
                 fileName = comics.getId()  + fileName.substring(fileName.lastIndexOf("."));
-                file.renameTo( new File(comPicPath, fileName));
+                file.renameTo( new File("public/images/comics", fileName));
                 comics.setPicture(fileName);
                 comicsList.add(comics);
             }
