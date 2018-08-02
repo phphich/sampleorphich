@@ -112,6 +112,9 @@ public class myController extends Controller{
         if(newForm.hasErrors()){
             return  Application.main(book_form_helper_list.render(newForm));
         }
+
+
+
         else{
         /*    books.add(new Book("Computer Programming1", "DR.John", "สารคดี", "ไทย", "เคยได้รับรางวัล","N/A", 1000.00) );
 
